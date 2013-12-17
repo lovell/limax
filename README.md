@@ -13,7 +13,7 @@ Currently supports, but not limited to, the following scripts:
 * Chinese: e.g. 官话, 吴语  (converts to Latin script using tone number Pinyin)
 * Japanese: e.g. ひらがな, カタカナ (converts to Romaji using Hepburn)
 
-Based on number of `npm` downloads, the most popular Node.js module for generating slugs is `[slug](https://github.com/dodo/node-slug)`, which claims it "slugifies even utf-8 chars!" You may be pleased to discover that all characters in a utf-8 encoded string are "utf-8 chars"!
+Based on number of `npm` downloads, the most popular Node.js module for generating slugs is [slug](https://github.com/dodo/node-slug), which claims it "slugifies even utf-8 chars!" You may be pleased to discover that all characters in a utf-8 encoded string are "utf-8 chars"!
 
 This module depends on the [speakingurl](https://github.com/pid/speakingurl) module and remains mostly API-compatible with both it and the more popular [slug](https://github.com/dodo/node-slug) module.
 

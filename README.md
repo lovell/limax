@@ -1,10 +1,15 @@
 # limax
 
-(Yet another) Node.js module to generate URL slugs, also known as clean URLs, user-friendly URLs and SEO-friendly URLs.
+(Yet another) Node.js module to generate URL slugs,
+also known as clean URLs, user-friendly URLs and SEO-friendly URLs.
 
 The difference?
 
-This module includes Romanisation of non-Latin scripts. Give it a string of text in pretty much any major world language and it will convert it to valid characters, conforming to [RFC3986](http://www.ietf.org/rfc/rfc3986.txt), for use within the path element of a URL.
+This module includes Romanisation of non-Latin scripts.
+Give it a string of text in pretty much any major world language
+and it will convert it to valid characters,
+conforming to [RFC3986](http://www.ietf.org/rfc/rfc3986.txt),
+for use within the path element of a URL.
 
 Currently supports, but not limited to, the following scripts:
 
@@ -13,11 +18,10 @@ Currently supports, but not limited to, the following scripts:
 * Chinese: e.g. 官话, 吴语  (converts to Latin script using tone number Pinyin)
 * Japanese: e.g. ひらがな, カタカナ (converts to Romaji using Hepburn)
 
-Based on number of `npm` downloads, the most popular Node.js module for generating slugs is [slug](https://github.com/dodo/node-slug), which claims it "slugifies even utf-8 chars!" You may be pleased to discover that all characters in a utf-8 encoded string are "utf-8 chars"!
-
-This module depends on the [speakingurl](https://github.com/pid/speakingurl) module and remains mostly API-compatible with both it and the more popular [slug](https://github.com/dodo/node-slug) module.
-
-If you already use either the `speakingurl` or `slug` modules, you can probably swap in `limax` without changing the logic in your code.
+If you already use either the
+[speakingurl](https://www.npmjs.com/package/speakingurl) or
+[slug](https://www.npmjs.com/package/slug) modules,
+you can probably swap in `limax` without changing the logic in your code.
 
 Oh, and `limax` is the Latin word for slug.
 

@@ -13,31 +13,35 @@ var tests = {
   "i ♥ latin": "i-love-latin",
   "Я люблю русский": "ya-lyublyu-russkij",
   "私は ひらがな が大好き": "ha-hiragana-gaki",
-  "我爱官话": "wo3-ai4-guan1-hua4"
+  "我爱官话": "wo3-ai4-guan1-hua4",
+  // https://github.com/keystonejs/keystone-utils/issues/12
+  "one2three": "one-2-three",
+  "The User's Guide": "the-users-guide",
+  "The User’s Guide": "the-users-guide"
 };
 
 Object.keys(tests).forEach(function(test) {
   var actual = slug(test);
   var expected = tests[test];
-  assert.equal(actual, expected);
+  assert.strictEqual(actual, expected);
 });
 
 Object.keys(tests).forEach(function(test) {
   var actual = slug(test, "_");
   var expected = tests[test].replace(/-/g, "_");
-  assert.equal(actual, expected);
+  assert.strictEqual(actual, expected);
 });
 
 Object.keys(tests).forEach(function(test) {
   var actual = slug(test, {replacement: "_"});
   var expected = tests[test].replace(/-/g, "_");
-  assert.equal(actual, expected);
+  assert.strictEqual(actual, expected);
 });
 
 Object.keys(tests).forEach(function(test) {
   var actual = slug(test, {separator: "_"});
   var expected = tests[test].replace(/-/g, "_");
-  assert.equal(actual, expected);
+  assert.strictEqual(actual, expected);
 });
 
-assert.equal(slug("Ich ♥ Deutsch", {lang: "de"}), "ich-liebe-deutsch");
+assert.strictEqual(slug("Ich ♥ Deutsch", {lang: "de"}), "ich-liebe-deutsch");

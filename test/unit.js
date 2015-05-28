@@ -11,7 +11,9 @@ var tests = {
   // https://github.com/keystonejs/keystone-utils/issues/12
   'one2three': 'one-2-three',
   'The User\'s Guide': 'the-users-guide',
-  'The User’s Guide': 'the-users-guide'
+  'The User’s Guide': 'the-users-guide',
+  // https://github.com/lovell/limax/issues/4
+  '弄堂里的菜品赤醬': 'nong4-tang2-li3-di2-cai4-pin3-chi4-jiang4'
 };
 
 Object.keys(tests).forEach(function(test) {
@@ -39,3 +41,7 @@ Object.keys(tests).forEach(function(test) {
 });
 
 assert.strictEqual(slug('Ich ♥ Deutsch', {lang: 'de'}), 'ich-liebe-deutsch');
+
+// https://github.com/lovell/limax/issues/4
+assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: true}), 'nong4-tang2-li3-di2-cai4-pin3-chi4-jiang4');
+assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: false}), 'nong-tang-li-di-cai-pin-chi-jiang');

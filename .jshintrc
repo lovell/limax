@@ -2,5 +2,5 @@
   "strict": true,
   "node": true,
   "maxparams": 2,
-  "maxcomplexity": 6
+  "maxcomplexity": 7
 }

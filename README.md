@@ -15,7 +15,7 @@ Currently supports, but not limited to, the following scripts:
 
 * Latin: e.g. English, français, Deutsch, español, português
 * Cyrillic: e.g. Русский язык, български език, українська мова
-* Chinese: e.g. 官话, 吴语  (converts to Latin script using tone number Pinyin)
+* Chinese: e.g. 官话, 吴语  (converts to Latin script using Pinyin with optional tone number)
 * Japanese: e.g. ひらがな, カタカナ (converts to Romaji using Hepburn)
 
 If you already use either the
@@ -32,29 +32,31 @@ Oh, and `limax` is the Latin word for slug.
 ## Usage
 
 ```javascript
-var slug = require("limax");
+var slug = require('limax');
 ```
 
 ### slug(text)
 
 ```javascript
-var latin = slug("i ♥ latin"); // i-love-latin
-var cyrillic = slug("Я люблю русский"); // ya-lyublyu-russkij
-var pinyin = slug("我爱官话"); // wo3-ai4-guan1-hua4
-var romaji = slug("私は ひらがな が大好き"); // ha-hiragana-gaki
+var latin = slug('i ♥ latin'); // i-love-latin
+var cyrillic = slug('Я люблю русский'); // ya-lyublyu-russkij
+var pinyin = slug('我爱官话'); // wo3-ai4-guan1-hua4
+var romaji = slug('私は ひらがな が大好き'); // ha-hiragana-gaki
 ```
 
 ### slug(text, options)
 
 options:
-* replacement: char to replace whitespace with, defaults to `-` (provides API compatibility with the `slug` module)
-* separator: equivalent to `replacement` (provides API compatibility with the `speakingurl` module)
-* lang: ISO 639-1 two-letter language code, defaults to auto-detected language
+* `replacement`: String to replace whitespace with, defaults to `-` (provides API compatibility with the `slug` module)
+* `separator`: String, equivalent to `replacement` (provides API compatibility with the `speakingurl` module)
+* `lang`: String, ISO 639-1 two-letter language code, defaults to auto-detected language
+* `tone`: Boolean, add tone numbers to Pinyin transliteration of Chinese, defaults to `true`
 
 ```javascript
-var strich = slug("Ich ♥ Deutsch", {lang: "de"}); // ich-liebe-deutsch
-var unterstreichen1 = slug("Ich ♥ Deutsch", {lang: "de", replacement: "_"}); // i_liebe_deutsch
-var unterstreichen2 = slug("Ich ♥ Deutsch", {lang: "de", separator: "_"}); // i_liebe_deutsch
+var strich = slug('Ich ♥ Deutsch', {lang: 'de'}); // ich-liebe-deutsch
+var unterstreichen1 = slug('Ich ♥ Deutsch', {lang: 'de', replacement: '_'}); // i_liebe_deutsch
+var unterstreichen2 = slug('Ich ♥ Deutsch', {lang: 'de', separator: '_'}); // i_liebe_deutsch
+var wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-di-cai-pin-chi-jiang
 ```
 
 ### slug(text, replacement)
@@ -62,7 +64,7 @@ var unterstreichen2 = slug("Ich ♥ Deutsch", {lang: "de", separator: "_"}); // 
 Provided to support backwards-compatibility with the `slug` module.
 
 ```javascript
-var underscore = slug("i ♥ unicode", "_"); // i_love_unicode
+var underscore = slug('i ♥ unicode', '_'); // i_love_unicode
 ```
 
 ## Test [![Build Status](https://travis-ci.org/lovell/limax.png?branch=master)](https://travis-ci.org/lovell/limax)

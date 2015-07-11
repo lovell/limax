@@ -4,3 +4,4 @@ test
 .jshintrc
 .gitignore
 .travis.yml
+appveyor.yml

@@ -1,0 +1,11 @@
+os: Visual Studio 2014 CTP4
+environment:
+  matrix:
+  - nodejs_version: "0.10"
+  - nodejs_version: "0.12"
+  - nodejs_version: "2"
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+  - npm install --msvs_version=2013
+test_script:
+  - npm test

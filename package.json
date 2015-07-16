@@ -31,7 +31,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "hepburn": "^0.6.0",
-    "pinyin2": "^2.0.8",
+    "pinyin": "^2.5.0",
     "speakingurl": "^5.0.1"
   }
 }

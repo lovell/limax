@@ -79,7 +79,7 @@ Pull requests with mappings and tests for further scripts and languages are more
 
 ## Licence
 
-Copyright 2013, 2014, 2015 Lovell Fuller
+Copyright 2013, 2014, 2015 Lovell Fuller and contributors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -5,7 +5,7 @@ var slug = require('../lib/limax');
 
 var tests = {
   'i ♥ latin': 'i-love-latin',
-  'Я люблю русский': 'ya-lyublyu-russkij',
+  'Я люблю русский': 'ya-lyublyu-russkii',
   '私は ひらがな が大好き': 'ha-hiragana-gaki',
   '我爱官话': 'wo3-ai4-guan1-hua4',
   // https://github.com/keystonejs/keystone-utils/issues/12

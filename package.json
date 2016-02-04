@@ -33,8 +33,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "hepburn": "^0.6.0",
+    "hepburn": "^1.0.0",
     "pinyin": "2.6.2",
-    "speakingurl": "^6.0.0"
+    "speakingurl": "^9.0.0"
   }
 }

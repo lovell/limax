@@ -13,7 +13,10 @@ var tests = {
   'The User\'s Guide': 'the-users-guide',
   'The User’s Guide': 'the-users-guide',
   // https://github.com/lovell/limax/issues/4
-  '弄堂里的菜品赤醬': 'nong4-tang2-li3-di2-cai4-pin3-chi4-jiang4'
+  '弄堂里的菜品赤醬': 'nong4-tang2-li3-di2-cai4-pin3-chi4-jiang4',
+  // https://github.com/lovell/limax/issues/12
+  '12345': '12345',
+  'one 2three': 'one-2three'
 };
 
 Object.keys(tests).forEach(function(test) {

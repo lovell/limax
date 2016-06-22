@@ -51,12 +51,17 @@ options:
 * `separator`: String, equivalent to `replacement` (provides API compatibility with the `speakingurl` module)
 * `lang`: String, ISO 639-1 two-letter language code, defaults to auto-detected language
 * `tone`: Boolean, add tone numbers to Pinyin transliteration of Chinese, defaults to `true`
+* `separateNumbers`: Boolean, separate numbers that are within a word, defaults to `true`
 
 ```javascript
 var strich = slug('Ich ♥ Deutsch', {lang: 'de'}); // ich-liebe-deutsch
 var unterstreichen1 = slug('Ich ♥ Deutsch', {lang: 'de', replacement: '_'}); // i_liebe_deutsch
 var unterstreichen2 = slug('Ich ♥ Deutsch', {lang: 'de', separator: '_'}); // i_liebe_deutsch
 var wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-di-cai-pin-chi-jiang
+
+// separateNumbers example
+var numbersInWord = slug('hello2world', {separateNumbers: false}); // hello2world 
+var numbersSeparated = slug('hello2world'); // hello-2-world 
 ```
 
 ### slug(text, replacement)

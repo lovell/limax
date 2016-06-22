@@ -48,3 +48,7 @@ assert.strictEqual(slug('Ich ♥ Deutsch', {lang: 'de'}), 'ich-liebe-deutsch');
 // https://github.com/lovell/limax/issues/4
 assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: true}), 'nong4-tang2-li3-di2-cai4-pin3-chi4-jiang4');
 assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: false}), 'nong-tang-li-di-cai-pin-chi-jiang');
+
+// https://github.com/lovell/limax/issues/14
+assert.strictEqual(slug('hello2world', { separateNumbers: false }), 'hello2world');
+assert.strictEqual(slug('hello2world', { separateNumbers: true }), 'hello-2-world');

@@ -16,7 +16,9 @@ var tests = {
   '弄堂里的菜品赤醬': 'nong4-tang2-li3-di2-cai4-pin3-chi4-jiang4',
   // https://github.com/lovell/limax/issues/12
   '12345': '12345',
-  'one 2three': 'one-2three'
+  'one 2three': 'one-2three',
+  // https://github.com/lovell/limax/pull/17
+  'Pop brésilienne header': 'pop-bresilienne-header'
 };
 
 Object.keys(tests).forEach(function(test) {

@@ -32,16 +32,16 @@ Oh, and `limax` is the Latin word for slug.
 ## Usage
 
 ```javascript
-var slug = require('limax');
+import slug from 'limax';
 ```
 
 ### slug(text)
 
 ```javascript
-var latin = slug('i ♥ latin'); // i-love-latin
-var cyrillic = slug('Я люблю русский'); // ya-lyublyu-russkij
-var pinyin = slug('我爱官话'); // wo3-ai4-guan1-hua4
-var romaji = slug('私は ひらがな が大好き'); // ha-hiragana-gaki
+const latin = slug('i ♥ latin'); // i-love-latin
+const cyrillic = slug('Я люблю русский'); // ya-lyublyu-russkij
+const pinyin = slug('我爱官话'); // wo3-ai4-guan1-hua4
+const romaji = slug('私は ひらがな が大好き'); // ha-hiragana-gaki
 ```
 
 ### slug(text, options)
@@ -58,22 +58,22 @@ options:
   * Array, add chars to allowed charMap
 
 ```javascript
-var strich = slug('Ich ♥ Deutsch', {lang: 'de'}); // ich-liebe-deutsch
-var unterstreichen1 = slug('Ich ♥ Deutsch', {lang: 'de', replacement: '_'}); // i_liebe_deutsch
-var unterstreichen2 = slug('Ich ♥ Deutsch', {lang: 'de', separator: '_'}); // i_liebe_deutsch
-var wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-di-cai-pin-chi-jiang
+const strich = slug('Ich ♥ Deutsch', {lang: 'de'}); // ich-liebe-deutsch
+const unterstreichen1 = slug('Ich ♥ Deutsch', {lang: 'de', replacement: '_'}); // i_liebe_deutsch
+const unterstreichen2 = slug('Ich ♥ Deutsch', {lang: 'de', separator: '_'}); // i_liebe_deutsch
+const wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-di-cai-pin-chi-jiang
 
 // separateNumbers example
-var numbersInWord = slug('hello2world', {separateNumbers: false}); // hello2world 
-var numbersSeparated = slug('hello2world'); // hello-2-world 
+const numbersInWord = slug('hello2world', {separateNumbers: false}); // hello2world
+const numbersSeparated = slug('hello2world'); // hello-2-world
 
 // maintainCase example
-var caseNotMaintained = slug('Hello2World'); // hello-2-world
-var caseMaintained = slug('Hello2World', { maintainCase: true }); // Hello-2-World
+const caseNotMaintained = slug('Hello2World'); // hello-2-world
+const caseMaintained = slug('Hello2World', { maintainCase: true }); // Hello-2-World
 
 // custom example
-var custom1 = slug('hello.world', { custom: ['.'] }); // hello.world
-var custom2 = slug('hello-*-world', { custom: { '*': 'asterisk' } }); // hello-asterisk-world
+const custom1 = slug('hello.world', { custom: ['.'] }); // hello.world
+const custom2 = slug('hello-*-world', { custom: { '*': 'asterisk' } }); // hello-asterisk-world
 ```
 
 ### slug(text, replacement)
@@ -81,7 +81,7 @@ var custom2 = slug('hello-*-world', { custom: { '*': 'asterisk' } }); // hello-a
 Provided to support backwards-compatibility with the `slug` module.
 
 ```javascript
-var underscore = slug('i ♥ unicode', '_'); // i_love_unicode
+const underscore = slug('i ♥ unicode', '_'); // i_love_unicode
 ```
 
 ## Test [![Build Status](https://travis-ci.org/lovell/limax.png?branch=master)](https://travis-ci.org/lovell/limax)

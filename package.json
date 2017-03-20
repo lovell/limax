@@ -33,7 +33,8 @@
     "Aleksey Olenyuk <alo@qapint.com>",
     "Daryl Chan <dvrylc@gmail.com>",
     "Arjan Frans <arjanfrans.com@gmail.com>",
-    "Fabrice Labbe <fabrice.labbe@adfab.fr>"
+    "Fabrice Labbe <fabrice.labbe@adfab.fr>",
+    "Lukas Spieß <lukas.spiess@gmail.com>"
   ],
   "license": "Apache-2.0",
   "dependencies": {

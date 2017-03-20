@@ -54,3 +54,11 @@ assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: false}), 'nong-tang-l
 // https://github.com/lovell/limax/issues/14
 assert.strictEqual(slug('hello2world', { separateNumbers: false }), 'hello2world');
 assert.strictEqual(slug('hello2world', { separateNumbers: true }), 'hello-2-world');
+
+// Test maintainCase option
+assert.strictEqual(slug('Hello2World', { maintainCase: false }), 'hello-2-world');
+assert.strictEqual(slug('Hello2World', { maintainCase: true }), 'Hello-2-World');
+
+// Test custom option
+assert.strictEqual(slug('hello.world', { custom: ['.'] }), 'hello.world');
+assert.strictEqual(slug('hello-*-world', { custom: { '*': 'asterisk' } }), 'hello-asterisk-world');

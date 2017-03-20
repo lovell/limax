@@ -52,6 +52,10 @@ options:
 * `lang`: String, ISO 639-1 two-letter language code, defaults to auto-detected language
 * `tone`: Boolean, add tone numbers to Pinyin transliteration of Chinese, defaults to `true`
 * `separateNumbers`: Boolean, separate numbers that are within a word, defaults to `true`
+* `maintainCase`: Boolean, maintain the original string's casing, defaults to `false`
+* `custom`:
+  * Object, custom map for translation, overwrites all i.e. { '&': '#', '*': ' star ' }
+  * Array, add chars to allowed charMap
 
 ```javascript
 var strich = slug('Ich ♥ Deutsch', {lang: 'de'}); // ich-liebe-deutsch
@@ -62,6 +66,14 @@ var wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-di-
 // separateNumbers example
 var numbersInWord = slug('hello2world', {separateNumbers: false}); // hello2world 
 var numbersSeparated = slug('hello2world'); // hello-2-world 
+
+// maintainCase example
+var caseNotMaintained = slug('Hello2World'); // hello-2-world
+var caseMaintained = slug('Hello2World', { maintainCase: true }); // Hello-2-World
+
+// custom example
+var custom1 = slug('hello.world', { custom: ['.'] }); // hello.world
+var custom2 = slug('hello-*-world', { custom: { '*': 'asterisk' } }); // hello-asterisk-world
 ```
 
 ### slug(text, replacement)

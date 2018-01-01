@@ -62,3 +62,27 @@ assert.strictEqual(slug('Hello2World', { maintainCase: true }), 'Hello-2-World')
 // Test custom option
 assert.strictEqual(slug('hello.world', { custom: ['.'] }), 'hello.world');
 assert.strictEqual(slug('hello-*-world', { custom: { '*': 'asterisk' } }), 'hello-asterisk-world');
+
+// https://github.com/lovell/limax/issues/25
+assert.strictEqual(
+  slug('404', { separateNumbers: true }),
+  '404'
+);
+assert.strictEqual(
+  slug('404', { separateNumbers: false }),
+  '404'
+);
+assert.strictEqual(
+  slug('状态404页面未找到', { separateNumbers: true }),
+  'zhuang4-tai4-404-ye4-mian4-wei4-zhao3-dao4'
+);
+assert.strictEqual(
+  slug('状态404页面未找到', { separateNumbers: false }),
+  'zhuang4-tai4-404-ye4-mian4-wei4-zhao3-dao4'
+);
+
+// https://github.com/lovell/limax/issues/28
+assert.strictEqual(
+  slug('特殊天-1', { tone: false }),
+  'te-shu-tian-1'
+);

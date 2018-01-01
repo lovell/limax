@@ -1,6 +1,6 @@
 {
   "name": "limax",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "./lib/limax",
   "description": "Node.js module to generate URL slugs. Another one? This one cares about i18n and transliterates non-Latin scripts to conform to the RFC3986 standard. Mostly API-compatible with similar modules.",
   "repository": {
@@ -39,7 +39,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "hepburn": "^1.0.0",
-    "pinyin": "^2.8.2",
-    "speakingurl": "^13.0.0"
+    "pinyin": "^2.8.3",
+    "speakingurl": "^14.0.1"
   }
 }

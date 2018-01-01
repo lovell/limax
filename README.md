@@ -54,8 +54,8 @@ options:
 * `separateNumbers`: Boolean, separate numbers that are within a word, defaults to `true`
 * `maintainCase`: Boolean, maintain the original string's casing, defaults to `false`
 * `custom`:
-  * Object, custom map for translation, overwrites all i.e. { '&': '#', '*': ' star ' }
-  * Array, add chars to allowed charMap
+  - Object, custom map for translation, overwrites all i.e. `{ '&': '#', '*': ' star ' }`
+  - Array, add chars to allowed charMap
 
 ```javascript
 const strich = slug('Ich ♥ Deutsch', {lang: 'de'}); // ich-liebe-deutsch

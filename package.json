@@ -11,7 +11,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "semistandard && node test/unit"
+    "test": "semistandard && nyc --reporter=html ava"
   },
   "keywords": [
     "slug",
@@ -43,6 +43,8 @@
     "speakingurl": "^14.0.1"
   },
   "devDependencies": {
+    "ava": "^0.24.0",
+    "nyc": "^11.4.1",
     "semistandard": "^11.0.0"
   }
 }

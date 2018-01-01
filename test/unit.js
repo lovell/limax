@@ -1,104 +1,121 @@
 'use strict';
 
-const assert = require('assert');
-const slug = require('../lib/limax');
+const ava = require('ava');
+const limax = require('../lib/limax');
 
 const tests = {
   'i ♥ latin': 'i-love-latin',
   'Я люблю русский': 'ya-lyublyu-russkii',
   '私は ひらがな が大好き': 'ha-hiragana-gaki',
   '我爱官话': 'wo3-ai4-guan1-hua4',
-  // https://github.com/keystonejs/keystone-utils/issues/12
   'one2three': 'one-2-three',
   'The User\'s Guide': 'the-users-guide',
   'The User’s Guide': 'the-users-guide',
-  // https://github.com/lovell/limax/issues/4
   '弄堂里的菜品赤醬': 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4',
-  // https://github.com/lovell/limax/issues/12
   '12345': '12345',
   'one 2three': 'one-2three',
-  // https://github.com/lovell/limax/pull/17
   'Pop brésilienne header': 'pop-bresilienne-header'
 };
+const testInputs = Object.keys(tests);
 
-Object.keys(tests).forEach(function (test) {
-  const actual = slug(test);
-  const expected = tests[test];
-  assert.strictEqual(actual, expected);
+ava('Basic usage', function (t) {
+  t.plan(testInputs.length);
+  testInputs.forEach(function (input) {
+    t.true(limax(input) === tests[input]);
+  });
 });
 
-Object.keys(tests).forEach(function (test) {
-  const actual = slug(test, '_');
-  const expected = tests[test].replace(/-/g, '_');
-  assert.strictEqual(actual, expected);
+ava('Set separator via parameter', function (t) {
+  t.plan(testInputs.length);
+  testInputs.forEach(function (input) {
+    t.true(limax(input, '_') === tests[input].replace(/-/g, '_'));
+  });
 });
 
-Object.keys(tests).forEach(function (test) {
-  const actual = slug(test, {replacement: '_'});
-  const expected = tests[test].replace(/-/g, '_');
-  assert.strictEqual(actual, expected);
+ava('Set separator via replacement option', function (t) {
+  t.plan(testInputs.length);
+  testInputs.forEach(function (input) {
+    t.true(limax(input, { replacement: '_' }) === tests[input].replace(/-/g, '_'));
+  });
 });
 
-Object.keys(tests).forEach(function (test) {
-  const actual = slug(test, {separator: '_'});
-  const expected = tests[test].replace(/-/g, '_');
-  assert.strictEqual(actual, expected);
+ava('Set separator via separator option', function (t) {
+  t.plan(testInputs.length);
+  testInputs.forEach(function (input) {
+    t.true(limax(input, { separator: '_' }) === tests[input].replace(/-/g, '_'));
+  });
 });
 
-assert.strictEqual(slug('Ich ♥ Deutsch', {lang: 'de'}), 'ich-liebe-deutsch');
+ava('Set language via lang option', function (t) {
+  t.plan(3);
+  t.true(
+    limax('Ich ♥ Deutsch', { lang: 'de' }) === 'ich-liebe-deutsch'
+  );
+  t.true(
+    limax('私は ひらがな が大好き', { lang: 'jp' }) === 'ha-hiragana-gaki'
+  );
+  t.true(
+    limax('我爱官话', { lang: 'zh' }) === 'wo3-ai4-guan1-hua4'
+  );
+});
 
-// https://github.com/lovell/limax/issues/4
-assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: true}), 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4');
-assert.strictEqual(slug('弄堂里的菜品赤醬', {tone: false}), 'nong-tang-li-de-cai-pin-chi-jiang');
+ava('Set Pinyin tone numbering via tone option', function (t) {
+  t.plan(3);
+  t.true(
+    limax('弄堂里的菜品赤醬', { tone: true }) === 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4'
+  );
+  t.true(
+    limax('弄堂里的菜品赤醬', { tone: false }) === 'nong-tang-li-de-cai-pin-chi-jiang'
+  );
+  t.true(
+    limax('特殊天-1', { tone: false }) === 'te-shu-tian-1'
+  );
+});
 
-// https://github.com/lovell/limax/issues/14
-assert.strictEqual(slug('hello2world', { separateNumbers: false }), 'hello2world');
-assert.strictEqual(slug('hello2world', { separateNumbers: true }), 'hello-2-world');
+ava('Set separateNumbers via options', function (t) {
+  t.plan(6);
+  t.true(
+    limax('hello2world', { separateNumbers: false }) === 'hello2world'
+  );
+  t.true(
+    limax('hello2world', { separateNumbers: true }) === 'hello-2-world'
+  );
+  t.true(
+    limax('404', { separateNumbers: true }) === '404'
+  );
+  t.true(
+    limax('404', { separateNumbers: false }) === '404'
+  );
+  t.true(
+    limax('状态404页面未找到', { separateNumbers: true }) === 'zhuang4-tai4-404-ye4-mian4-wei4-zhao3-dao4'
+  );
+  t.true(
+    limax('状态404页面未找到', { separateNumbers: false }) === 'zhuang4-tai4-404-ye4-mian4-wei4-zhao3-dao4'
+  );
+});
 
-// Test maintainCase option
-assert.strictEqual(slug('Hello2World', { maintainCase: false }), 'hello-2-world');
-assert.strictEqual(slug('Hello2World', { maintainCase: true }), 'Hello-2-World');
+ava('Set maintainCase via options', function (t) {
+  t.plan(2);
+  t.true(
+    limax('Hello2World', { maintainCase: false }) === 'hello-2-world'
+  );
+  t.true(
+    limax('Hello2World', { maintainCase: true }) === 'Hello-2-World'
+  );
+});
 
-// Test custom option
-assert.strictEqual(slug('hello.world', { custom: ['.'] }), 'hello.world');
-assert.strictEqual(slug('hello-*-world', { custom: { '*': 'asterisk' } }), 'hello-asterisk-world');
-
-// https://github.com/lovell/limax/issues/25
-assert.strictEqual(
-  slug('404', { separateNumbers: true }),
-  '404'
-);
-assert.strictEqual(
-  slug('404', { separateNumbers: false }),
-  '404'
-);
-assert.strictEqual(
-  slug('状态404页面未找到', { separateNumbers: true }),
-  'zhuang4-tai4-404-ye4-mian4-wei4-zhao3-dao4'
-);
-assert.strictEqual(
-  slug('状态404页面未找到', { separateNumbers: false }),
-  'zhuang4-tai4-404-ye4-mian4-wei4-zhao3-dao4'
-);
-
-// https://github.com/lovell/limax/issues/28
-assert.strictEqual(
-  slug('特殊天-1', { tone: false }),
-  'te-shu-tian-1'
-);
-
-// https://github.com/lovell/limax/issues/22
-assert.strictEqual(
-  slug('中文.pdf', { custom: ['.'] }),
-  'zhong1-wen2-.pdf'
-);
-
-// https://github.com/lovell/limax/issues/26
-assert.strictEqual(
-  slug('私は ひらがな が大好き', { lang: 'jp' }),
-  'ha-hiragana-gaki'
-);
-assert.strictEqual(
-  slug('我爱官话', { lang: 'zh' }),
-  'wo3-ai4-guan1-hua4'
-);
+ava('Set custom via options', function (t) {
+  t.plan(4);
+  t.true(
+    limax('hello.world', { custom: ['.'] }) === 'hello.world'
+  );
+  t.true(
+    limax('hello-*-world', { custom: { '*': 'asterisk' } }) === 'hello-asterisk-world'
+  );
+  t.true(
+    limax('中文.pdf', { custom: ['.'] }) === 'zhong1-wen2-.pdf'
+  );
+  t.true(
+    limax('中文.pdf', { custom: { '.': 'dot' } }) === 'zhong1-wen2-dotpdf'
+  );
+});

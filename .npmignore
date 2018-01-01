@@ -1,7 +1,7 @@
+coverage
 node_modules
 test
-.jshintignore
-.jshintrc
 .gitignore
+.nyc_output
 .travis.yml
 appveyor.yml

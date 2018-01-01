@@ -5,7 +5,10 @@ also known as clean URLs, user-friendly URLs and SEO-friendly URLs.
 
 The difference?
 
-This module includes Romanisation of non-Latin scripts.
+This module extends the fantastic
+[speakingurl](https://www.npmjs.com/package/speakingurl)
+module to include Romanisation of Chinese and Japanese scripts.
+
 Give it a string of text in pretty much any major world language
 and it will convert it to valid characters,
 conforming to [RFC3986](http://www.ietf.org/rfc/rfc3986.txt),
@@ -96,7 +99,7 @@ Pull requests with mappings and tests for further scripts and languages are more
 
 ## Licence
 
-Copyright 2013, 2014, 2015, 2016 Lovell Fuller and contributors.
+Copyright 2013, 2014, 2015, 2016, 2017, 2018 Lovell Fuller and contributors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

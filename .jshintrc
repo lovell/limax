@@ -1,6 +1,0 @@
-{
-  "strict": true,
-  "node": true,
-  "maxparams": 2,
-  "maxcomplexity": 7
-}

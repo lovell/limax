@@ -92,3 +92,13 @@ assert.strictEqual(
   slug('中文.pdf', { custom: ['.'] }),
   'zhong1-wen2-.pdf'
 );
+
+// https://github.com/lovell/limax/issues/26
+assert.strictEqual(
+  slug('私は ひらがな が大好き', { lang: 'jp' }),
+  'ha-hiragana-gaki'
+);
+assert.strictEqual(
+  slug('我爱官话', { lang: 'zh' }),
+  'wo3-ai4-guan1-hua4'
+);

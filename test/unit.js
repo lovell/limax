@@ -86,3 +86,9 @@ assert.strictEqual(
   slug('特殊天-1', { tone: false }),
   'te-shu-tian-1'
 );
+
+// https://github.com/lovell/limax/issues/22
+assert.strictEqual(
+  slug('中文.pdf', { custom: ['.'] }),
+  'zhong1-wen2-.pdf'
+);

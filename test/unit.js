@@ -21,25 +21,25 @@ const tests = {
   'Pop brésilienne header': 'pop-bresilienne-header'
 };
 
-Object.keys(tests).forEach(function(test) {
+Object.keys(tests).forEach(function (test) {
   const actual = slug(test);
   const expected = tests[test];
   assert.strictEqual(actual, expected);
 });
 
-Object.keys(tests).forEach(function(test) {
+Object.keys(tests).forEach(function (test) {
   const actual = slug(test, '_');
   const expected = tests[test].replace(/-/g, '_');
   assert.strictEqual(actual, expected);
 });
 
-Object.keys(tests).forEach(function(test) {
+Object.keys(tests).forEach(function (test) {
   const actual = slug(test, {replacement: '_'});
   const expected = tests[test].replace(/-/g, '_');
   assert.strictEqual(actual, expected);
 });
 
-Object.keys(tests).forEach(function(test) {
+Object.keys(tests).forEach(function (test) {
   const actual = slug(test, {separator: '_'});
   const expected = tests[test].replace(/-/g, '_');
   assert.strictEqual(actual, expected);

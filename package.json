@@ -11,7 +11,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "node test/unit"
+    "test": "semistandard && node test/unit"
   },
   "keywords": [
     "slug",
@@ -41,5 +41,8 @@
     "hepburn": "^1.0.0",
     "pinyin": "^2.8.3",
     "speakingurl": "^14.0.1"
+  },
+  "devDependencies": {
+    "semistandard": "^11.0.0"
   }
 }

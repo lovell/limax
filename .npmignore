@@ -5,3 +5,4 @@ test
 .nyc_output
 .travis.yml
 appveyor.yml
+package-lock.json

@@ -38,13 +38,13 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "hepburn": "^1.0.0",
+    "hepburn": "^1.1.0",
     "pinyin": "^2.8.3",
     "speakingurl": "^14.0.1"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
-    "nyc": "^11.4.1",
-    "semistandard": "^11.0.0"
+    "ava": "^0.25.0",
+    "nyc": "^13.0.1",
+    "semistandard": "^12.0.1"
   }
 }

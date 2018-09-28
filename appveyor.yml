@@ -4,10 +4,6 @@ build: off
 platform: x64
 environment:
   matrix:
-  - nodejs_version: "4"
-    nodejs_arch: "x86"
-  - nodejs_version: "4"
-    nodejs_arch: "x64"
   - nodejs_version: "6"
     nodejs_arch: "x86"
   - nodejs_version: "6"

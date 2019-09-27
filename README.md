@@ -54,7 +54,7 @@ options:
 * `separator`: String, equivalent to `replacement` (provides API compatibility with the `speakingurl` module)
 * `lang`: String, ISO 639-1 two-letter language code, defaults to auto-detected language
 * `tone`: Boolean, add tone numbers to Pinyin transliteration of Chinese, defaults to `true`
-* `separateNumbers`: Boolean, separate numbers that are within a word, defaults to `true`
+* `separateNumbers`: Boolean, separate numbers that are within a word, defaults to `false`
 * `maintainCase`: Boolean, maintain the original string's casing, defaults to `false`
 * `custom`:
   - Object, custom map for translation, overwrites all i.e. `{ '&': '#', '*': ' star ' }`
@@ -67,12 +67,12 @@ const unterstreichen2 = slug('Ich ♥ Deutsch', {lang: 'de', separator: '_'}); /
 const wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-di-cai-pin-chi-jiang
 
 // separateNumbers example
-const numbersInWord = slug('hello2world', {separateNumbers: false}); // hello2world
-const numbersSeparated = slug('hello2world'); // hello-2-world
+const numbersInWord = slug('hello2world'); // hello2world
+const numbersSeparated = slug('hello2world', { separateNumbers: true }); // hello-2-world
 
 // maintainCase example
-const caseNotMaintained = slug('Hello2World'); // hello-2-world
-const caseMaintained = slug('Hello2World', { maintainCase: true }); // Hello-2-World
+const caseNotMaintained = slug('HelloWorld'); // helloworld
+const caseMaintained = slug('HelloWorld', { maintainCase: true }); // HelloWorld
 
 // custom example
 const custom1 = slug('hello.world', { custom: ['.'] }); // hello.world

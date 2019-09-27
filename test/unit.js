@@ -8,7 +8,7 @@ const tests = {
   'Я люблю русский': 'ya-lyublyu-russkii',
   '私は ひらがな が大好き': 'ha-hiragana-gaki',
   我爱官话: 'wo3-ai4-guan1-hua4',
-  one2three: 'one-2-three',
+  one2three: 'one2three',
   'The User\'s Guide': 'the-users-guide',
   'The User’s Guide': 'the-users-guide',
   弄堂里的菜品赤醬: 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4',
@@ -97,10 +97,10 @@ ava('Set separateNumbers via options', function (t) {
 ava('Set maintainCase via options', function (t) {
   t.plan(2);
   t.true(
-    limax('Hello2World', { maintainCase: false }) === 'hello-2-world'
+    limax('HelloWorld', { maintainCase: false }) === 'helloworld'
   );
   t.true(
-    limax('Hello2World', { maintainCase: true }) === 'Hello-2-World'
+    limax('HelloWorld', { maintainCase: true }) === 'HelloWorld'
   );
 });
 

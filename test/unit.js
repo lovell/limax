@@ -7,12 +7,12 @@ const tests = {
   'i ♥ latin': 'i-love-latin',
   'Я люблю русский': 'ya-lyublyu-russkii',
   '私は ひらがな が大好き': 'ha-hiragana-gaki',
-  '我爱官话': 'wo3-ai4-guan1-hua4',
-  'one2three': 'one-2-three',
+  我爱官话: 'wo3-ai4-guan1-hua4',
+  one2three: 'one-2-three',
   'The User\'s Guide': 'the-users-guide',
   'The User’s Guide': 'the-users-guide',
-  '弄堂里的菜品赤醬': 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4',
-  '12345': '12345',
+  弄堂里的菜品赤醬: 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4',
+  12345: '12345',
   'one 2three': 'one-2three',
   'Pop brésilienne header': 'pop-bresilienne-header'
 };

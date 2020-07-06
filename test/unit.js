@@ -94,6 +94,16 @@ ava('Set separateNumbers via options', function (t) {
   );
 });
 
+ava('Set separateApostrophes via options', function (t) {
+  t.plan(2);
+  t.true(
+    limax('j\'aime', { separateApostrophes: false }) === 'jaime'
+  );
+  t.true(
+    limax('j\'aime', { separateApostrophes: true }) === 'j-aime'
+  );
+});
+
 ava('Set maintainCase via options', function (t) {
   t.plan(2);
   t.true(

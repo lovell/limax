@@ -35,7 +35,8 @@
     "Daryl Chan <dvrylc@gmail.com>",
     "Arjan Frans <arjanfrans.com@gmail.com>",
     "Fabrice Labbe <fabrice.labbe@adfab.fr>",
-    "Lukas Spieß <lukas.spiess@gmail.com>"
+    "Lukas Spieß <lukas.spiess@gmail.com>",
+    "David Dijan <david.djian@traceweb.fr>"
   ],
   "license": "Apache-2.0",
   "dependencies": {

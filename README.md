@@ -55,6 +55,7 @@ options:
 * `lang`: String, ISO 639-1 two-letter language code, defaults to auto-detected language
 * `tone`: Boolean, add tone numbers to Pinyin transliteration of Chinese, defaults to `true`
 * `separateNumbers`: Boolean, separate numbers that are within a word, defaults to `false`
+* `separateApostrophes`: Boolean, separate apostrophes that are within a word, defaults to `false`
 * `maintainCase`: Boolean, maintain the original string's casing, defaults to `false`
 * `custom`:
   - Object, custom map for translation, overwrites all i.e. `{ '&': '#', '*': ' star ' }`
@@ -69,6 +70,10 @@ const wuYin = slug('弄堂里的菜品赤醬', {tone: false}); // nong-tang-li-d
 // separateNumbers example
 const numbersInWord = slug('hello2world'); // hello2world
 const numbersSeparated = slug('hello2world', { separateNumbers: true }); // hello-2-world
+
+// separateApostrophes example
+const apostrophesInWord = slug('j\'aime'); // jaime
+const apostrophesSeparated = slug('j\'aime', { separateApostrophes: true }); // j-aime
 
 // maintainCase example
 const caseNotMaintained = slug('HelloWorld'); // helloworld
@@ -99,7 +104,7 @@ Pull requests with mappings and tests for further scripts and languages are more
 
 ## Licence
 
-Copyright 2013, 2014, 2015, 2016, 2017, 2018, 2019 Lovell Fuller and contributors.
+Copyright 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 Lovell Fuller and contributors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

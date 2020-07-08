@@ -5,6 +5,7 @@ type Options = {
   replacement?: string;
   separator?: string;
   separateNumbers?: boolean;
+  separateApostrophes?: boolean;
   tone?: boolean;
 } | string;
 

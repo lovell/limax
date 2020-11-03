@@ -40,8 +40,8 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
+    "@napi-rs/pinyin": "^1.2.0",
     "hepburn": "^1.2.0",
-    "pinyin": "^2.9.1",
     "speakingurl": "^14.0.1"
   },
   "devDependencies": {

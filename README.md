@@ -92,7 +92,7 @@ Provided to support backwards-compatibility with the `slug` module.
 const underscore = slug('i ♥ unicode', '_'); // i_love_unicode
 ```
 
-## Test [![Build Status](https://travis-ci.org/lovell/limax.png?branch=master)](https://travis-ci.org/lovell/limax)
+## Test ![.github/workflows/ci.yml](https://github.com/lovell/limax/workflows/.github/workflows/ci.yml/badge.svg)
 
 Run the unit tests with:
 

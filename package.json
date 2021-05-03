@@ -12,7 +12,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "test": "semistandard && nyc --reporter=html ava"
+    "test": "semistandard && nyc --reporter=html ava",
+    "changelog": "conventional-changelog -i CHANGELOG.md -s"
   },
   "keywords": [
     "slug",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "ava": "^3.15.0",
+    "conventional-changelog-cli": "^2.1.1",
     "nyc": "^15.1.0",
     "semistandard": "^16.0.0"
   }

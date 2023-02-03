@@ -14,7 +14,8 @@ const tests = {
   弄堂里的菜品赤醬: 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4',
   12345: '12345',
   'one 2three': 'one-2three',
-  'Pop brésilienne header': 'pop-bresilienne-header'
+  'Pop brésilienne header': 'pop-bresilienne-header',
+  Pōneke: 'poneke'
 };
 const testInputs = Object.keys(tests);
 

@@ -47,10 +47,12 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@napi-rs/pinyin": "^1.7.1",
     "hepburn": "^1.2.0",
     "lodash.deburr": "^4.1.0",
     "speakingurl": "^14.0.1"
+  },
+  "optionalDependencies": {
+    "@napi-rs/pinyin": "^1.7.1"
   },
   "devDependencies": {
     "ava": "^5.2.0",

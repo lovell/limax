@@ -1,3 +1,10 @@
+## 4.0.0 (2023-02-27)
+
+* Add lodash.deburr transform (#45) ([43df57f](https://github.com/lovell/limax/commit/43df57f)), closes [#45](https://github.com/lovell/limax/issues/45)
+* Add mostly-automated changelog #41 ([5b3e6e2](https://github.com/lovell/limax/commit/5b3e6e2)), closes [#41](https://github.com/lovell/limax/issues/41)
+* Drop support for Node.js 10 and 12 ([6b5de4d](https://github.com/lovell/limax/commit/6b5de4d))
+* Move pinyin to optional deps ([f8b3bf4](https://github.com/lovell/limax/commit/f8b3bf4))
+
 ## 3.0.0 (2021-01-26)
 
 * Bump minimum Node.js version to 10 ([11326d1](https://github.com/lovell/limax/commit/11326d1))

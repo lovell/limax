@@ -16,8 +16,8 @@ for use within the path element of a URL.
 
 Currently supports, but not limited to, the following scripts:
 
-* Latin: e.g. English, Français, Deutsch, Español, Português
-* Cyrillic: e.g. Русский язык, Български език, Українська мова
+* Latin: e.g. English, français, Deutsch, español, português
+* Cyrillic: e.g. русский язык, български език, українська мова
 * Chinese: e.g. 官话, 吴语  (converts to Latin script using Pinyin with optional tone number)
 * Japanese: e.g. ひらがな, カタカナ (converts to Romaji using Hepburn)
 

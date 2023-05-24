@@ -74,6 +74,9 @@ ava('Set Pinyin tone numbering via tone option', function (t) {
   t.true(
     limax('路上的行人', { tone: true }) === 'lu4-shang-de-xing2-ren2'
   );
+  t.true(
+    limax('银行', { tone: true }) === 'yin2-hang2'
+  );
 });
 
 ava('Set separateNumbers via options', function (t) {

@@ -71,6 +71,9 @@ ava('Set Pinyin tone numbering via tone option', function (t) {
   t.true(
     limax('特殊天-1', { tone: false }) === 'te-shu-tian-1'
   );
+  t.true(
+    limax('路上的行人', { tone: true }) === 'lu4-shang-de-xing2-ren2'
+  );
 });
 
 ava('Set separateNumbers via options', function (t) {

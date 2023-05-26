@@ -49,9 +49,7 @@
   "dependencies": {
     "hepburn": "^1.2.0",
     "lodash.deburr": "^4.1.0",
-    "speakingurl": "^14.0.1"
-  },
-  "optionalDependencies": {
+    "speakingurl": "^14.0.1",
     "pinyin-pro": "^3.14.0"
   },
   "devDependencies": {

@@ -48,7 +48,7 @@ ava('Set separator via separator option', function (t) {
 });
 
 ava('Set language via lang option', function (t) {
-  t.plan(3);
+  t.plan(5);
   t.true(
     limax('Ich ♥ Deutsch', { lang: 'de' }) === 'ich-liebe-deutsch'
   );

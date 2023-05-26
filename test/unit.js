@@ -9,9 +9,10 @@ const tests = {
   '私は ひらがな が大好き': 'ha-hiragana-gaki',
   我爱官话: 'wo3-ai4-guan1-hua4',
   one2three: 'one2three',
+  
   'The User\'s Guide': 'the-users-guide',
   'The User’s Guide': 'the-users-guide',
-  弄堂里的菜品赤醬: 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4',
+  弄堂里的菜品赤醬: 'long4-tang2-li3-de-cai4-pin3-chi4-jiang4',
   12345: '12345',
   'one 2three': 'one-2three',
   'Pop brésilienne header': 'pop-bresilienne-header',
@@ -63,10 +64,10 @@ ava('Set language via lang option', function (t) {
 ava('Set Pinyin tone numbering via tone option', function (t) {
   t.plan(5);
   t.true(
-    limax('弄堂里的菜品赤醬', { tone: true }) === 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4'
+    limax('弄堂里的菜品赤醬', { tone: true }) === 'long4-tang2-li3-de-cai4-pin3-chi4-jiang4'
   );
   t.true(
-    limax('弄堂里的菜品赤醬', { tone: false }) === 'nong-tang-li-de-cai-pin-chi-jiang'
+    limax('弄堂里的菜品赤醬', { tone: false }) === 'long-tang-li-de-cai-pin-chi-jiang'
   );
   t.true(
     limax('特殊天-1', { tone: false }) === 'te-shu-tian-1'

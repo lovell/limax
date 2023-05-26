@@ -9,7 +9,6 @@ const tests = {
   '私は ひらがな が大好き': 'ha-hiragana-gaki',
   我爱官话: 'wo3-ai4-guan1-hua4',
   one2three: 'one2three',
-  
   'The User\'s Guide': 'the-users-guide',
   'The User’s Guide': 'the-users-guide',
   弄堂里的菜品赤醬: 'long4-tang2-li3-de-cai4-pin3-chi4-jiang4',

@@ -48,7 +48,7 @@ ava('Set separator via separator option', function (t) {
 });
 
 ava('Set language via lang option', function (t) {
-  t.plan(5);
+  t.plan(3);
   t.true(
     limax('Ich ♥ Deutsch', { lang: 'de' }) === 'ich-liebe-deutsch'
   );
@@ -61,7 +61,7 @@ ava('Set language via lang option', function (t) {
 });
 
 ava('Set Pinyin tone numbering via tone option', function (t) {
-  t.plan(3);
+  t.plan(5);
   t.true(
     limax('弄堂里的菜品赤醬', { tone: true }) === 'nong4-tang2-li3-de-cai4-pin3-chi4-jiang4'
   );

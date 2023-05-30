@@ -1,3 +1,6 @@
+// Copyright 2013 Lovell Fuller and others.
+// SPDX-License-Identifier: Apache-2.0
+
 type Options = {
   custom?: string[] | { [key: string]: string; };
   lang?: string;

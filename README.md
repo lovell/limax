@@ -104,7 +104,7 @@ Pull requests with mappings and tests for further scripts and languages are more
 
 ## Licence
 
-Copyright 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023 Lovell Fuller and contributors.
+Copyright 2013 Lovell Fuller and others.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

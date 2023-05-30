@@ -1,3 +1,10 @@
+## 4.1.0 (2023-05-30)
+
+* CI: add Node.js 20 ([5b1c669](https://github.com/lovell/limax/commit/5b1c669))
+* Ensure SPDX header in all source code ([98b0c53](https://github.com/lovell/limax/commit/98b0c53))
+* Make use of capitals in language names consistent (#46) ([95aeb99](https://github.com/lovell/limax/commit/95aeb99)), closes [#46](https://github.com/lovell/limax/issues/46)
+* Replace @napi-rs/pinyin by pinyin-pro (#48) ([8848ea0](https://github.com/lovell/limax/commit/8848ea0)), closes [#48](https://github.com/lovell/limax/issues/48)
+
 ## 4.0.0 (2023-02-27)
 
 * Add lodash.deburr transform (#45) ([43df57f](https://github.com/lovell/limax/commit/43df57f)), closes [#45](https://github.com/lovell/limax/issues/45)

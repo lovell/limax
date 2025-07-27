@@ -16,6 +16,14 @@
     "index.d.ts",
     "lib/"
   ],
+  "exports": {
+    ".": {
+      "import": "./lib/limax.mjs",
+      "require": "./lib/limax.js"
+    },
+    "./esm": "./lib/limax.mjs",
+    "./cjs": "./lib/limax.js"
+  },
   "scripts": {
     "test": "semistandard && nyc --reporter=html ava",
     "changelog": "conventional-changelog -i CHANGELOG.md -s"

@@ -3,6 +3,11 @@
 
 'use strict';
 
+import speakingurl from 'speakingurl';
+import hepburn from 'hepburn';
+import deburr from 'lodash.deburr';
+import { pinyin } from 'pinyin-pro';
+
 type Options = {
   custom?: string[] | { [key: string]: string; };
   lang?: string;
@@ -14,10 +19,6 @@ type Options = {
   tone?: boolean;
 } | string;
 
-import speakingurl from 'speakingurl';
-import hepburn from 'hepburn';
-import deburr from 'lodash.deburr';
-import { pinyin } from 'pinyin-pro';
 
 function customCharsAsArray(custom?: string[] | { [key: string]: string; }) {
   custom = custom || [];

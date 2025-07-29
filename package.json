@@ -1,8 +1,9 @@
 {
   "name": "limax",
   "version": "4.1.0",
-  "main": "./lib/limax",
-  "types": "index.d.ts",
+  "main": "./lib/limax.cjs",
+  "types": "./lib/limax.d.ts",
+  "type": "module",
   "description": "Node.js module to generate URL slugs. Another one? This one cares about i18n and transliterates non-Latin scripts to conform to the RFC3986 standard. Mostly API-compatible with similar modules.",
   "repository": {
     "type": "git",
@@ -18,15 +19,29 @@
   ],
   "exports": {
     ".": {
-      "import": "./lib/limax.mjs",
-      "require": "./lib/limax.js"
+      "import": {
+        "types": "./lib/limax.d.mts",
+        "default": "./lib/limax.mjs"
+      },
+      "require": {
+        "types": "./lib/limax.d.cts",
+        "default": "./lib/limax.cjs"
+      }
     },
-    "./esm": "./lib/limax.mjs",
-    "./cjs": "./lib/limax.js"
+    "./cjs": {
+      "types": "./lib/limax.d.cts",
+      "default": "./lib/limax.cjs"
+    },
+    "./esm": {
+      "types": "./lib/limax.d.mts",
+      "default": "./lib/limax.mjs"
+    }
   },
   "scripts": {
     "test": "semistandard && nyc --reporter=html ava",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -i CHANGELOG.md -s",
+    "build": "unbuild",
+    "prepack": "unbuild"
   },
   "keywords": [
     "slug",
@@ -64,6 +79,7 @@
     "ava": "^5.2.0",
     "conventional-changelog-cli": "^2.2.2",
     "nyc": "^15.1.0",
-    "semistandard": "^16.0.1"
+    "semistandard": "^16.0.1",
+    "unbuild": "^3.6.0"
   }
 }

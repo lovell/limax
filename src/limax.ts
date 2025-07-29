@@ -3,17 +3,28 @@
 
 'use strict';
 
-const speakingurl = require('speakingurl');
-const hepburn = require('hepburn');
-const deburr = require('lodash.deburr');
-const { pinyin } = require('pinyin-pro');
+type Options = {
+  custom?: string[] | { [key: string]: string; };
+  lang?: string;
+  maintainCase?: boolean;
+  replacement?: string;
+  separator?: string;
+  separateNumbers?: boolean;
+  separateApostrophes?: boolean;
+  tone?: boolean;
+} | string;
 
-function customCharsAsArray (custom) {
+import speakingurl from 'speakingurl';
+import hepburn from 'hepburn';
+import deburr from 'lodash.deburr';
+import { pinyin } from 'pinyin-pro';
+
+function customCharsAsArray(custom?: string[] | { [key: string]: string; }) {
   custom = custom || [];
   return Array.isArray(custom) ? custom : Object.keys(custom);
 }
 
-module.exports = function (text, opt) {
+export default function limax(text: string, opt?: Options): string {
   const options = typeof opt === 'string'
     ? { separator: opt }
     : opt || {};

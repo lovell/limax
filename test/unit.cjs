@@ -4,7 +4,7 @@
 'use strict';
 
 const ava = require('ava');
-const limax = require('../lib/limax');
+const limax = require('../lib/index');
 
 const tests = {
   'i ♥ latin': 'i-love-latin',

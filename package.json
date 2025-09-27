@@ -6,7 +6,7 @@
   "description": "Node.js module to generate URL slugs. Another one? This one cares about i18n and transliterates non-Latin scripts to conform to the RFC3986 standard. Mostly API-compatible with similar modules.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lovell/limax"
+    "url": "git://github.com/lovell/limax.git"
   },
   "engines": {
     "node": ">=14"
@@ -16,8 +16,14 @@
     "index.d.ts",
     "lib/"
   ],
+  "exports": {
+    "import": "./lib/limax.mjs",
+    "require": "./lib/index.cjs"
+  },
+  "type": "module",
   "scripts": {
-    "test": "semistandard && nyc --reporter=html ava",
+    "build": "esbuild lib/limax.mjs --format=cjs --outfile=lib/limax.cjs",
+    "test": "semistandard lib/limax.mjs && npm run build && nyc --reporter=html ava test/unit.cjs",
     "changelog": "conventional-changelog -i CHANGELOG.md -s"
   },
   "keywords": [
@@ -55,6 +61,7 @@
   "devDependencies": {
     "ava": "^5.2.0",
     "conventional-changelog-cli": "^2.2.2",
+    "esbuild": "^0.25.10",
     "nyc": "^15.1.0",
     "semistandard": "^16.0.1"
   }

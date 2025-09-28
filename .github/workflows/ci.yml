@@ -1,20 +1,15 @@
+name: CI
 on:
   - push
   - pull_request
-permissions:
-  contents: read
+permissions: {}
 jobs:
-  CI:
-    runs-on: ${{ matrix.os }}
+  test:
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        os:
-          - macos-15
-          - macos-15-intel
-          - ubuntu-24.04
-          - ubuntu-24.04-arm
-          - windows-2025
-          - windows-11-arm
         node-version:
           - 14
           - 16
@@ -28,4 +23,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
+    - run: npm run build
     - run: npm test

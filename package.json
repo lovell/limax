@@ -53,13 +53,13 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "hepburn": "^1.2.0",
+    "hepburn": "^1.2.2",
     "lodash.deburr": "^4.1.0",
     "speakingurl": "^14.0.1",
-    "pinyin-pro": "^3.14.0"
+    "pinyin-pro": "^3.27.0"
   },
   "devDependencies": {
-    "ava": "^5.2.0",
+    "ava": "^5.3.1",
     "conventional-changelog-cli": "^2.2.2",
     "esbuild": "^0.25.10",
     "nyc": "^15.1.0",

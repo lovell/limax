@@ -1,3 +1,9 @@
+## 4.2.0-rc.0 (2025-09-28)
+
+* CI: Ensure all Node.js LTS versions from 14 onwards ([e97753e](https://github.com/lovell/limax/commit/e97753e))
+* CI: update all runners and actions to latest ([e1a7211](https://github.com/lovell/limax/commit/e1a7211))
+* Add dual support for ESM and CommonJS ([c054e25](https://github.com/lovell/limax/commit/c054e25))
+
 ## 4.1.0 (2023-05-30)
 
 * CI: add Node.js 20 ([5b1c669](https://github.com/lovell/limax/commit/5b1c669))

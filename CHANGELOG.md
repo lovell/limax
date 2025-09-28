@@ -1,5 +1,6 @@
-## 4.2.0-rc.0 (2025-09-28)
+## 4.2.0 (2025-09-28)
 
+* Bump deps ([b71d396](https://github.com/lovell/limax/commit/b71d396))
 * CI: Ensure all Node.js LTS versions from 14 onwards ([e97753e](https://github.com/lovell/limax/commit/e97753e))
 * CI: update all runners and actions to latest ([e1a7211](https://github.com/lovell/limax/commit/e1a7211))
 * Add dual support for ESM and CommonJS ([c054e25](https://github.com/lovell/limax/commit/c054e25))

@@ -11,7 +11,7 @@ module to include Romanisation of Chinese and Japanese scripts.
 
 Give it a string of text in pretty much any major world language
 and it will convert it to valid characters,
-conforming to [RFC3986](http://www.ietf.org/rfc/rfc3986.txt),
+conforming to [RFC3986](https://www.ietf.org/rfc/rfc3986.txt),
 for use within the path element of a URL.
 
 Currently supports, but not limited to, the following scripts:
@@ -92,12 +92,6 @@ Provided to support backwards-compatibility with the `slug` module.
 const underscore = slug('i ♥ unicode', '_'); // i_love_unicode
 ```
 
-## Test ![.github/workflows/ci.yml](https://github.com/lovell/limax/workflows/.github/workflows/ci.yml/badge.svg)
-
-Run the unit tests with:
-
-    npm test
-
 ## Contribute
 
 Pull requests with mappings and tests for further scripts and languages are more than welcome.
@@ -108,7 +102,7 @@ Copyright 2013 Lovell Fuller and others.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+You may obtain a copy of the License at [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

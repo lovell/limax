@@ -18,7 +18,8 @@
   ],
   "exports": {
     "import": "./lib/limax.mjs",
-    "require": "./lib/index.cjs"
+    "require": "./lib/index.cjs",
+    "types": "./index.d.ts"
   },
   "type": "module",
   "scripts": {

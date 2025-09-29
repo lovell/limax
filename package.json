@@ -17,9 +17,9 @@
     "lib/"
   ],
   "exports": {
+    "types": "./index.d.ts",
     "import": "./lib/limax.mjs",
-    "require": "./lib/index.cjs",
-    "types": "./index.d.ts"
+    "require": "./lib/index.cjs"
   },
   "type": "module",
   "scripts": {

@@ -14,4 +14,4 @@ type Options = {
 
 declare function slug(text: string, opt?: Options): string;
 
-export = slug;
+export default slug;

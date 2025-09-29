@@ -1,3 +1,8 @@
+## 4.2.1 (2025-09-29)
+
+* TypeScript: add type definition tests ([5d451e8](https://github.com/lovell/limax/commit/5d451e8))
+* TypeScript: ensure correct default export after move to dual package (#52) ([280579c](https://github.com/lovell/limax/commit/280579c)), closes [#52](https://github.com/lovell/limax/issues/52)
+
 ## 4.2.0 (2025-09-28)
 
 * Bump deps ([b71d396](https://github.com/lovell/limax/commit/b71d396))

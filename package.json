@@ -58,7 +58,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "hepburn": "^1.2.2",
-    "lodash.deburr": "^4.1.0",
     "pinyin-pro": "^3.27.0",
     "speakingurl": "^14.0.1"
   },

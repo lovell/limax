@@ -1,3 +1,8 @@
+## 4.2.2 (2026-01-09)
+
+* Remove ambiguous extensionless `main` field (#53) ([2725729](https://github.com/lovell/limax/commit/2725729)), closes [#53](https://github.com/lovell/limax/issues/53)
+* Replace deburr dependency with string.normalize ([67b1022](https://github.com/lovell/limax/commit/67b1022))
+
 ## 4.2.1 (2025-09-29)
 
 * TypeScript: add type definition tests ([5d451e8](https://github.com/lovell/limax/commit/5d451e8))

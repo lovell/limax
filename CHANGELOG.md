@@ -1,3 +1,7 @@
+## 4.2.3 (2026-03-19)
+
+* Ensure umlauts are preserved during unicode normalisation (#54) ([5351f17](https://github.com/lovell/limax/commit/5351f17)), closes [#54](https://github.com/lovell/limax/issues/54)
+
 ## 4.2.2 (2026-01-09)
 
 * Remove ambiguous extensionless `main` field (#53) ([2725729](https://github.com/lovell/limax/commit/2725729)), closes [#53](https://github.com/lovell/limax/issues/53)

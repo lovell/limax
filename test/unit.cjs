@@ -64,7 +64,8 @@ ava('Set language via lang option', function (t) {
 });
 
 ava('German umlaut transliteration', function (t) {
-  t.plan(4);
+  t.plan(8);
+  // With lang: 'de' option
   t.true(
     limax('Schöner Städte Übung', { lang: 'de' }) === 'schoener-staedte-uebung'
   );
@@ -76,6 +77,19 @@ ava('German umlaut transliteration', function (t) {
   );
   t.true(
     limax('Ärger', { lang: 'de' }) === 'aerger'
+  );
+  // Without lang option (default behavior)
+  t.true(
+    limax('München') === 'muenchen'
+  );
+  t.true(
+    limax('Größe') === 'groesse'
+  );
+  t.true(
+    limax('Ärger') === 'aerger'
+  );
+  t.true(
+    limax('Schöner Städte Übung') === 'schoener-staedte-uebung'
   );
 });
 

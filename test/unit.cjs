@@ -63,6 +63,36 @@ ava('Set language via lang option', function (t) {
   );
 });
 
+ava('German umlaut transliteration', function (t) {
+  t.plan(8);
+  // With lang: 'de' option
+  t.true(
+    limax('Schöner Städte Übung', { lang: 'de' }) === 'schoener-staedte-uebung'
+  );
+  t.true(
+    limax('München', { lang: 'de' }) === 'muenchen'
+  );
+  t.true(
+    limax('Größe', { lang: 'de' }) === 'groesse'
+  );
+  t.true(
+    limax('Ärger', { lang: 'de' }) === 'aerger'
+  );
+  // Without lang option (default behavior)
+  t.true(
+    limax('München') === 'muenchen'
+  );
+  t.true(
+    limax('Größe') === 'groesse'
+  );
+  t.true(
+    limax('Ärger') === 'aerger'
+  );
+  t.true(
+    limax('Schöner Städte Übung') === 'schoener-staedte-uebung'
+  );
+});
+
 ava('Set Pinyin tone numbering via tone option', function (t) {
   t.plan(5);
   t.true(
